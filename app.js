@@ -21,6 +21,7 @@ buttonEl.addEventListener('click', () => {
     const radioInput = document.querySelector('input:checked');
     const userThrow = radioInput.value;
     const throwResults = whoWin(userThrow, computerGuess);
+    const reset = document.querySelector('#reset');
 
     if (throwResults === 'win') {
         wins++;
@@ -40,6 +41,14 @@ buttonEl.addEventListener('click', () => {
     }
 
 
+    reset.addEventListener('click', () => {
+        ties = 0;
+        losses = 0;
+        wins = 0;
+        whoWonEl.textContent = wins;
+        tie.textContent = ties;
+        loseEl.textContent = losses;
+    });
 
     /*whoLoseDiv.textContent = losses++;
     whoTieDiv.textContent = ties++; */
