@@ -1,4 +1,4 @@
-export function getComputersThrow() {
+/*export function getComputersThrow() {
     let randomNumber = Math.ceil(Math.random()) * 3;
     let handShape;
 
@@ -13,22 +13,27 @@ export function getComputersThrow() {
 
     }
     return handShape;
-}
+} */
+export function jankan(someNumber) {
+    if (someNumber === 1) return 'rock';
+    if (someNumber === 2) return 'scissors';
 
+    return 'paper';
+}
 export function whoWin(user, computer) {
     if (user === 'rock' && computer === 'rock') {
-        return 'Tie!';
+        return 'tie';
     } else if (user === 'paper' && computer === 'paper') {
-        return 'Tie!';
+        return 'tie';
     } else if (user === 'scissors' && computer === 'scissors') {
-        return 'Tie!';
+        return 'tie';
     } else if (user === 'rock' && computer === 'scissors') {
-        return 'You Win!';
+        return 'win';
     } else if (user === 'paper' && computer === 'rock') {
-        return 'You Win!';
+        return 'win';
     } else if (user === 'scissors' && computer === 'paper') {
-        return 'You Win!';
-    } else return 'You Lose!';
+        return 'win';
+    } else return 'loss';
 }
 
 

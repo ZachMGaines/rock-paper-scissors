@@ -1,17 +1,34 @@
 // import functions and grab DOM elements
-import { getComputersThrow } from './utils.js';
+import { whoWin, jankan } from '../utils.js';
 // initialize state
-const button = document.getElementById('guess-button')
-const youWin = document.getElementById('you-win')
-const youLose = document.getElementById('you-lose')
-const tie = document.getElementById('tie')
+const buttonEl = document.getElementById('guess-button');
+const whoWonEl = document.getElementById('you-win');
+const loseEl = document.getElementById('you-lose');
+const tie = document.getElementById('tie');
 
-let wins = 0
-let draw = 0
+const radioInput = document.querySelector('input:checked');
+
+
+let wins = 0;
+let ties = 0;
+let losses = 0;
 
 
 // set event listeners to update state and DOMdsfds
-button.addEventListener('click', () => {
+buttonEl.addEventListener('click', () => {
+    let randomNumber = Math.ceil(Math.random() * 3);
+    let actualGuess = jankan(randomNumber);
+    const whoWonDiv = document.querySelector('#you-win');
+    const whoTieDiv = document.querySelector('#tie');
+    const whoLoseDiv = document.querySelector('#you-lose');
 
-    if (getComputersThrow === playersHand)
-})
+    if (actualGuess) {
+        return whoWonDiv.textContent = wins++;
+
+
+        /*whoLoseDiv.textContent = losses++;
+        whoTieDiv.textContent = ties++; */
+
+        console.log(actualGuess);
+
+    });
