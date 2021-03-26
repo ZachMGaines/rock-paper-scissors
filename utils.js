@@ -14,12 +14,15 @@
     }
     return handShape;
 } */
-export function jankan(someNumber) {
-    if (someNumber === 1) return 'rock';
-    if (someNumber === 2) return 'scissors';
+export function jankan() {
+    const randomNumber = Math.ceil(Math.random() * 3);
+    if (randomNumber === 1) return 'rock';
+    if (randomNumber === 2) return 'scissors';
+    if (randomNumber === 3) return 'paper';
 
-    return 'paper';
 }
+
+
 export function whoWin(user, computer) {
     if (user === 'rock' && computer === 'rock') {
         return 'tie';
