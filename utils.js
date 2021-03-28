@@ -4,9 +4,7 @@ export function jankan() {
     if (randomNumber === 1) return 'rock';
     if (randomNumber === 2) return 'scissors';
     if (randomNumber === 3) return 'paper';
-
 }
-
 
 export function whoWin(user, computer) {
     if (user === 'rock' && computer === 'rock') {
@@ -23,6 +21,3 @@ export function whoWin(user, computer) {
         return 'win';
     } else return 'loss';
 }
-
-
-
