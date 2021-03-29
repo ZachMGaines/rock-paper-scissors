@@ -1,6 +1,4 @@
-// import functions and grab DOM elements
-import { whoWin, jankan } from '../utils.js';
-// initialize state
+import { whoWin, jankan } from './utils.js';
 const buttonEl = document.getElementById('guess-button');
 const whoWonEl = document.getElementById('you-win');
 const loseEl = document.getElementById('you-lose');
